@@ -10,7 +10,8 @@ RUN apt-get update && \
     gnupg \
     lsb-release \
     software-properties-common \
-    ca-certificates && \
+    ca-certificates \
+    git && \
     rm -rf /var/lib/apt/lists/*
 
 # Instala Terraform
