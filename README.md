@@ -28,7 +28,7 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     container:
-      image: valcirjr/terraform-sops:latest  # Replace with your actual image
+      image: kimbodovalcir/kimbodo-posit-actions:latest  # Replace with your actual image
 
     steps:
       - uses: actions/checkout@v3
@@ -59,7 +59,7 @@ To test locally:
 docker run -it --rm \
   -v $(pwd):/workspace \
   -w /workspace \
-  valcirjr/terraform-sops:latest
+  kimbodovalcir/kimbodo-posit-actions:latest
 ```
 
 Then you can run:
@@ -118,8 +118,8 @@ docker build -t terraform-sops .
 (Optional) Publish to Docker Hub or GHCR:
 
 ```bash
-docker tag terraform-sops valcirjr/terraform-sops:latest
-docker push valcirjr/terraform-sops:latest
+docker tag terraform-sops kimbodovalcir/kimbodo-posit-actions:latest
+docker push kimbodovalcir/kimbodo-posit-actions:latest
 ```
 
 ---
