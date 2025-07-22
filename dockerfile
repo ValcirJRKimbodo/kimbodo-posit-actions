@@ -46,6 +46,10 @@ RUN curl -fsSL https://github.com/helmfile/helmfile/releases/download/v${HELMFIL
 
 # Instala helm-secrets plugin
 RUN helm plugin install https://github.com/jkroepke/helm-secrets
+
+# Install helm-diff plugin
+RUN helm plugin install https://github.com/databus23/helm-diff
+
 ENV HELM_PLUGINS=/root/.local/share/helm/plugins
 
 ENTRYPOINT ["/bin/bash"]
