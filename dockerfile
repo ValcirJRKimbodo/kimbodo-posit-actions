@@ -46,5 +46,6 @@ RUN curl -fsSL https://github.com/helmfile/helmfile/releases/download/v${HELMFIL
 
 # Instala helm-secrets plugin
 RUN helm plugin install https://github.com/jkroepke/helm-secrets
+ENV HELM_PLUGINS=/root/.local/share/helm/plugins
 
 ENTRYPOINT ["/bin/bash"]
